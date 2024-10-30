@@ -1,0 +1,130 @@
+@import (less) '../variables.less';
+@import (less) '../mixins.less';
+/* ****************************************************************
+METABOXES
+********************************************************************/
+.bonzer-custom-fields-creator-tabs-content{
+  .meta-boxes{
+    float: left;
+    width: 100%;    
+
+    .ui-sortable {
+      margin-bottom: 20px;
+    }
+
+    > header{
+      margin-bottom: 2px;
+      background: @teal-300;
+      padding: 10px;
+
+      h3 {
+        color: @white;
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .meta-box-panel{
+      padding: 15px;
+      position: relative;
+      background: @white;
+      border: 1px solid @grey_3;
+      border-top-width: 0;
+
+      &:first-child {
+        border-top-width: 1px;
+      }
+
+      > h4 {
+        background: @white;
+        color: @grey-700;
+        font-size: 18px;
+        margin: -15px -15px 13px;
+        padding: 18px 20px 20px 54px;
+      }
+
+      .meta-box-panel-action{
+        color: @white;
+        position: absolute;
+        right: 0;
+        top: 0px;
+        .opacity(0.5);
+        height: 60px;
+        line-height: 58px;
+        width: 50px;
+        text-align: center;
+
+        span{
+          height: inherit;
+          color: @grey-700;
+          line-height: inherit;
+        }
+
+        &:focus{
+          .box-shadow(none);
+          outline: none;
+        }
+
+        &.toggle {
+          left: 0;
+          right: auto;
+        }
+
+        &.remove{
+          right: 0;   
+
+          span{    
+            color: @danger-500;        
+            line-height: 25px;
+            height: auto;
+            width: 25px;
+            border-radius: 25px;
+            margin-top: 17px;
+          }
+        }
+        &.move{
+          cursor: move;
+          right: 51px;
+          font-size: 16px;
+        }
+      }
+      form{
+        
+      }
+      &.opened {
+        border-color: @primary-400;
+
+        > h4{
+          background: @primary-400;
+          color: @white;
+          border-bottom: 1px solid @primary-400;
+        }
+
+        .meta-box-panel-action {
+          border-color: fade(@white, 20);
+
+          span {
+            color: @white;
+          }
+        }
+      }
+      &.closed{
+        padding-bottom: 0;
+        h4{
+          margin-bottom: 0;
+        }
+        form{
+          display: none;
+        }
+      }
+
+      &:hover{
+        .meta-box-panel-action{
+          .opacity(1);
+          &.remove{
+            
+          }
+        }
+      }
+    }
+  }
+}

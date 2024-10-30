@@ -1,0 +1,58 @@
+@import (less) '../variables.less';
+@import (less) '../mixins.less';
+/* ****************************************************************
+SEARCH
+********************************************************************/
+.bonzer-custom-fields-creator-tabs-content{
+
+  .search-sections{
+    margin-bottom: 30px;
+    text-align: center;
+
+    .search-input{
+      width: 420px;
+      margin: auto;
+      max-width: 100%;
+      position: relative;
+
+      input {
+        .roundedcorners(7px);
+        .transition(background, 0.25s, ease-out);
+        .box-shadow(none);
+        background: @grey_3;
+        border: 2px solid @grey_3;
+        width: 100%;
+        line-height: 30px;
+        margin: 0;
+        padding: 0 15px;
+        line-height: 43px;
+        font-size: 16px;
+        &:focus {
+          .box-shadow(none);
+          background: @white;
+        }
+      }
+
+      .remove-search-filter{
+        position: absolute;
+        right: 0;
+        outline: none;
+        color: @danger-300;
+        top: 0;
+        line-height: 48px;
+
+        &:focus{
+          .box-shadow(none);
+          outline: none;
+        }
+
+        i {
+          line-height: 48px;
+          height: 48px;
+          width: 48px;
+        }
+
+      }
+    }      
+  }
+}

@@ -1,0 +1,64 @@
+@import (less) '../variables.less';
+@import (less) '../mixins.less';
+/* ****************************************************************
+METABOXES
+********************************************************************/
+.bonzer-custom-fields-creator-tabs-content{
+  .meta-boxes{
+    float: left;
+    width: 100%;
+    > header{
+      margin-bottom: 2px;
+      background: @teal-300;
+      padding: 10px;
+      h3{
+        color: @white;
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .meta-box-panel{
+      padding: 15px;
+      position: relative;
+      margin-bottom: 5px;
+      background: @white;
+      border: 1px solid darken(@purple-50, 10%);
+      >h4{
+        margin: -13px -13px 13px;
+        padding: 10px;
+        background: lighten(@purple-300, 5%);
+        color: @white;
+      }
+      .meta-box-panel-toggler{
+        color: @white;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        height: 35px;
+        line-height: 35px;
+        width: 40px;
+        text-align: center;
+        span{
+          height: inherit;
+          line-height: inherit;
+        }
+        &:focus{
+          .box-shadow(none);
+          outline: none;
+        }
+      }
+      form{
+        
+      }
+      &.closed{
+        padding-bottom: 2px;
+        h4{
+          margin-bottom: 0;
+        }
+        form{
+          display: none;
+        }
+      }
+    }
+  }
+}

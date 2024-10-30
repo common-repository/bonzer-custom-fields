@@ -1,0 +1,71 @@
+#adminmenu .toplevel_page_bcf .wp-menu-image img {
+  padding-top: 7px;
+}
+
+.input-wrapper.bonzer-inputs input, 
+.input-wrapper.bonzer-inputs select, 
+.input-wrapper.bonzer-inputs textarea {
+  min-width: 500px;
+}
+
+#addtag .input-wrapper.bonzer-inputs input, 
+#addtag .input-wrapper.bonzer-inputs select, 
+#addtag .input-wrapper.bonzer-inputs textarea,
+#addtag .input-wrapper.bonzer-inputs .chosen-container-multi .chosen-choices {
+  min-width: calc(100% - 48px);
+  background: #ffffff !important;
+}
+
+#addtag .input-wrapper.bonzer-inputs select,
+#addtag .input-wrapper.bonzer-inputs .chosen-container-multi .chosen-choices {
+  min-width: 100%;
+}
+
+.input-wrapper.bonzer-inputs > div.clear {
+  display: none;
+}
+
+.input-wrapper.bonzer-inputs.editor-input-wrapper .wp-editor-wrap {
+  width: 100%;
+}
+
+body .input-wrapper.bonzer-inputs.editor-input-wrapper label {
+  border: none;
+  background-color: transparent;
+}
+
+.form-table .input-wrapper.bonzer-inputs,
+#addtag .bonzer-form-fields-wrapper .form-field .input-wrapper.bonzer-inputs {
+  background-color: transparent;
+  margin: 0 0 10px;
+}
+
+.form-table .input-wrapper.bonzer-inputs > label {
+  color: transparent;
+  min-width: 0;
+}
+
+#addtag .bonzer-form-fields-wrapper .form-field .input-wrapper.bonzer-inputs.style-1.radio-input-wapper .options label {
+  margin-bottom: 5px !important;
+}
+
+.form-table .input-wrapper.bonzer-inputs > div {
+  width: 100%;
+}
+
+.form-table .input-wrapper.bonzer-inputs input, 
+.form-table .input-wrapper.bonzer-inputs select, 
+.form-table .input-wrapper.bonzer-inputs textarea,
+.form-table .input-wrapper.bonzer-inputs .chosen-container-multi .chosen-choices {
+  background: #ffffff !important;
+}
+
+.form-table .bcf-desc {
+  font-weight: 400;
+  opacity: 0.7;
+  margin-top: 3px;
+}
+
+ul.bonzer-inputs-all-icons li.icons-wrapper .arrow {
+  line-height: 44px;
+}

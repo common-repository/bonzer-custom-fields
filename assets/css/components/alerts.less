@@ -1,0 +1,36 @@
+@import (less) '../variables.less';
+@import (less) '../mixins.less';
+/* ****************************************************************
+ALERTS
+********************************************************************/
+.alert{
+  margin: 15px 0;
+  padding: 10px;
+  background: lighten(@info-50, 3%);
+  color: @info-700;
+  border: 1px solid darken(@info-50, 10%);
+
+  &.warning{
+    background: lighten(@warning-50, 3%);
+    color: @warning-700;
+    border: 1px solid darken(@warning-50, 10%);
+  }
+
+  &.danger{
+    background: lighten(@danger-50, 3%);
+    color: @danger-700;
+    border: 1px solid darken(@danger-50, 10%);
+  }
+
+  &.primary{
+    background: lighten(@primary-50, 3%);
+    color: @primary-700;
+    border: 1px solid darken(@primary-50, 10%);
+  }
+  
+  &.indigo{
+    background: lighten(@indigo-50, 3%);
+    color: @indigo-700;
+    border: 1px solid darken(@indigo-50, 10%);
+  }
+}

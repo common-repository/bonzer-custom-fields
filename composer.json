@@ -1,0 +1,14 @@
+{
+  "autoload": {
+    "psr-4": {
+      "BCF\\": "inc/"
+    }
+  },
+  "require": {
+    "php": ">=5.4.0",
+    "bonzer/wordpress-admin-inputs": "v0.0.4"
+  },
+  "files": ["bootstrap.php"],
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

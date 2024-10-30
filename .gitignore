@@ -1,0 +1,6 @@
+*.phpintel
+*.sublime*
+/nbproject/
+vendor/
+/assets/node_modules/
+composer.lock

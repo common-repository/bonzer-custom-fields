@@ -1,0 +1,162 @@
+@import (less) '../variables.less';
+@import (less) '../mixins.less';
+/* ****************************************************************
+Form Fields
+********************************************************************/
+.bonzer-custom-fields-creator-tabs-content{
+  .react-form-field{
+    float: left;
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+    border-bottom: 1px solid @grey_2;
+    padding: 0 0 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .button{
+      float: right;
+      margin-top: 12px;
+    }
+
+    &.inline{
+      border-width: 0;
+      width: auto;
+      select{
+        width: 100%;
+      }
+    }
+
+    > label{
+      padding-right: 25px;
+      float: left;
+      width: 300px;
+      line-height: 26px;
+      font-size: 17px;
+      font-weight: 600;
+    }
+
+    p {
+
+      &.help-block{
+        color: @grey-300;
+        font-style: italic;
+        margin: 5px 0 0;
+        line-height: 1.3;
+        font-weight: 400;
+      }
+
+      &.validation-status{
+        clear: both;
+        margin: 0;
+        position: absolute;
+        right: 0;
+        bottom: 12px;
+        &.error{
+          color: @danger-500;
+        }
+        &.info{
+          color: @info-500;
+        }
+        &.success{
+          color: @success-500;
+        }
+        &.warning{
+          color: @warning-500;
+        }
+      }
+    }
+
+    input, textarea, select{
+      .roundedcorners(5px);
+      background-color: @grey_2;
+      border: 1px solid @grey_2;
+      float: left;
+      margin: 0;
+      width: calc(~"100% - 300px");
+      min-width: calc(~"100% - 300px");
+      min-height: 50px;
+
+      &:focus {
+        .box-shadow(0 0 0 2px @grey_2);
+        background: @white;
+        outline: none;
+      }
+    }
+
+    input[type="radio"], 
+    input[type="checkbox"]{
+      border: 1px solid @grey_3;
+      background: @white;
+      width: auto;
+      float: none;
+      width: 25px;
+      min-width: 25px;
+      min-height: 25px;
+    }
+
+    input[type="checkbox"]{
+      margin-right: 10px;
+      &:checked {
+        &:before {
+          margin: 1px 0px;
+        }
+      }
+    }
+
+    textarea{
+      min-height: 100px;
+    }
+
+    .radio-option{
+
+      > label{
+        .roundedcorners(30px);
+        margin-right: 10px;
+        font-size: 15px;
+
+        input {
+          margin-right: 4px;
+          position: relative;
+          top: -1px;
+          .roundedcorners(30px);
+
+          &:checked::before {
+            margin: 7px;
+          }
+        }
+
+      }
+      &.block{
+        float: left;
+        > label{
+          margin-bottom: 8px;
+          display: block;
+        }
+      }
+    }
+    .react-form-field-codemirror{
+      margin-top: 0;
+      padding: 2px;
+      border: 1px solid @teal-300;
+      width: 60%;
+      float: left;
+    }
+    &.error{
+      margin: 0 0 15px;
+      box-shadow: none;
+      padding: 15px;
+      background: lighten(@warning-50, 3%);
+      display: block;
+      p{
+        &.validation-status{
+          right:15px;
+        }
+      }
+    }
+  }
+}

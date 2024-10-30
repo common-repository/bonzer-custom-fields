@@ -1,0 +1,172 @@
+@import (less) '../variables.less';
+@import (less) '../mixins.less';
+/* ****************************************************************
+Form Fields
+********************************************************************/
+  .dialog-box{
+    background: @white;
+    padding: 2px;
+    max-width: 320px;
+    margin: 0 0 25px;
+    border: 1px solid darken(@info-50, 10%);
+    header{
+      color: @white;
+      padding: 15px;
+      font-size: 17px;
+      background: @info-400;
+    }
+    .dialog-content{
+      padding: 15px 10px;
+      p{
+        font-size: 14px;
+        margin: 0;
+      }
+      ul{
+        padding: 10px 0 0;
+        border-top: 1px solid @light-border;
+        >h4 {
+          padding: 5px 10px;
+          margin: 0 0 10px;
+          color: @info-600;
+          background: @grey-50;
+          border-left:4px solid @info-300;
+        }
+        li{
+          color: @info-600;
+          font-weight: 500;
+        }
+      }
+    }
+    &.warning{
+      border: 1px solid darken(@warning-50, 10%);
+      header{
+        background: @warning-400;
+      }
+      ul{
+        >h4 {
+          color: @warning-600;
+          border-left:4px solid @warning-300;
+        }
+        li{
+          color: @warning-600;
+          font-weight: 500;
+        }
+      }
+    }
+    &.danger{
+      border: 1px solid darken(@danger-50, 10%);
+      header{
+        background: @danger-300;
+      }
+      ul{
+        >h4 {
+          color: @danger-600;
+          border-left:4px solid @danger-300;
+        }
+        li{
+          color: @danger-600;
+          font-weight: 500;
+        }
+      }
+    }
+    &.success{
+      border: 1px solid darken(@success-50, 10%);
+      header{
+        border-left:4px solid @success-400;
+      }
+      ul{
+        >h4 {
+          color: @success-600;
+          background: @success-300;
+        }
+        li{
+          color: @success-600;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  .popup-dialog-box{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1001001;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    .close-container{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .dialog-container{
+      background: @white;
+      width: 332px;
+      left: calc(~"50% - 166px");
+      top: 200px;
+      padding: 6px;
+      position: absolute;
+      .close-popup{
+        position: absolute;
+        right: 15px;
+        top: 21px;
+        z-index: 1001;
+        cursor: pointer;
+        color: @white;
+      }
+      .dialog-box{
+        margin-bottom: 0;
+      }
+      .dialog-content{
+        .confirmation-message{
+          span{
+            background: @slate-50;
+            padding: 0 15px;
+            line-height: 26px;
+            display: inline-block;
+            margin-top: 7px;
+            border-radius: 5px;
+          }
+        }
+        .confimation-footer{
+          padding: 15px;
+          margin: 10px -12px 0;
+          border-top: 1px solid @warning-300;
+          text-align: center;
+          background: @warning-50;
+          position: relative;
+          top: 17px;
+          .button{
+            padding: 8px 25px;
+            height: auto;
+            line-height: 1;
+            font-size: 15px;
+            &.button-success{
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+      &.lg{
+        width: calc(~"100% - 100px");
+        height: calc(~"100% - 100px");
+        left: 50px;
+        top: 50px;
+        overflow: auto;
+        .dialog-box{
+          width: 100%;
+          max-width: 100%;
+          height: auto;
+          .CodeMirror{
+            height: 170px;
+          }
+          h2{
+            font-size: 25px;
+            color: @info-700;
+          }
+        }
+      }
+    }
+  }

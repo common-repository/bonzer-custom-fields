@@ -1,0 +1,74 @@
+@import (less) '../variables.less';
+@import (less) '../mixins.less';
+/* ****************************************************************
+BOX SELECTOR
+********************************************************************/
+.bonzer-custom-fields-creator-tabs-content{
+  .selection-panel{
+    > header{
+      margin: -11px -11px 30px;
+      h4{
+        margin: 0;
+      }
+    }
+    &.multi-checkbox-selection-panel{
+      width: 50%;
+      min-width: 400px;
+      background: lighten(@grey-50, 5%);
+      border-color: darken(@grey-50, 10%);
+      float: left;
+      > header{
+        h4{
+          font-size: 16px;
+          font-weight: 700;
+        }
+      }
+      .react-form-field{
+        padding-bottom: 0;
+        margin-bottom: 0;
+        border-width: 0;
+      }
+      .checkbox-options{
+        clear: both;
+
+        > label{
+          position: relative;
+          display: block;
+          line-height: 1.5;
+          min-height: 40px;
+          font-weight: 500;
+          font-size: 15px;
+
+          .how-to-use{
+            min-width: 379px;
+            top: -2px;
+            position: absolute;
+            font-size: 11px;
+            background: @grey-50;
+            padding: 0 5px;
+            line-height: 23px;
+            margin-left: 10px;
+            display: inline-block;
+            .roundedcorners(15px);
+            border: 1px solid @light-border;
+
+            input{
+              color: @grey-600;
+              width: 100%;
+              font-size: 13px;
+              border-width: 0;
+              background: transparent;
+              min-height: 30px;
+              font-weight: 400;
+
+              &:focus{
+                outline: none;
+                .box-shadow(none);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
